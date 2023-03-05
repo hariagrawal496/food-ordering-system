@@ -1,0 +1,95 @@
+
+----------------------------------------------------------------
+
+          Mysql id :  root
+    Mysql password : SARKAR@kota1
+
+
+
+    -------------------------------user cases url ------------------------------------------------
+
+       case1 : As a user I should be able to log in and log out and register in the application.
+    
+			example :	    {
+				    			"userName":"Mohan",
+				    			"password": "pass"
+				   			}
+				   
+             Register (POST) :     localhost:8081     /user/register
+             
+             Login  (POST)   :     localhost:8081     /user/login
+             
+             Logout (GET)    :     localhost:8081     /user/logout
+             
+             ---------------------------------------------------------------------------------
+             
+      case 2 :    As a user I should be able to see all the items available along with the price.
+      
+          (GET) -->     localhost:8081       /user/searchItemAllRecord
+           
+           -----------------------------------------------------------------------------------
+        
+     case 3. As a user I should be able to select the item I want to order. 
+      						 (select the item name)
+      						 
+	 case 4. As a user I should be able to order n number of plates per item, 
+	 					(select the number of plate or qty)
+	 					
+	 case 5. As a user I should be able to order more than one item. 
+	 					(order is added in order table one by one)
+	 
+	   example :               
+						{
+						    "userName":"mohan",
+						    "itemName": "Dal",						   
+						    "numberOfPlates": 5,
+						    "userAddress":"Delhi"						    
+						}
+     
+						     
+						{
+						    "userName":"mohan",
+						    "itemName": "Roti",
+						    "numberOfPlates": 20,
+						    "userAddress":"Delhi"
+						    
+						}
+     
+          (POST)    -->    localhost:8081      /user/orderByItemAndQty
+             
+             Hint(Total bill value is added in the order table as a order placed )
+             in above example = 120 *5 + 10 * 20 -> 800
+             
+             ------------------------------------------------------------
+             
+            CASE:     As a user I should be able to my cart 
+              
+              (GET)   -->  localhost:8081    /user/myCard/mohan
+             
+             Hint:   When your are going for the bill of user,
+                     then your my-card details finally convert into order history list and made my-card empty
+             --------------------------------------------------------------------------------------------
+           
+           case 6 :    As a user I should be able to see my final bill on the screen.
+           
+              (GET)   -->   localhost:8081    /user/mohan/finalBill
+              
+              -------------------------------------------------------------------------------
+              
+            case 7 :   As a user I should be able to my order History
+              
+             (GET)    -->  localhost:8081    /user/mohan/getHistoryOfOrder
+           
+                 
+                  
+     
+     //-------------------------------------------------------------------------------------------
+     
+     
+     
+     
+     
+     
+     
+     
+     

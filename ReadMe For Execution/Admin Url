@@ -1,0 +1,89 @@
+
+-----------------------------------------------------
+
+          Mysql id :  root
+    Mysql password : SARKAR@kota1
+
+ -----------------------------------Admin Page urls ------------------------
+
+    case 1 :  As an admin I should be able to login and logout in the application
+    
+				    {
+						"adminName": "admin",
+						"password":"pass" 
+					}
+        
+            Login (POST) :   localhost:8081   /admin/login
+            
+            Logout (GET) :   localhost:8081   /admin/logout
+            
+            ---------------------------------------------
+            
+    case 2 : As an admin I should be able to perform CRUD on Users 
+    
+		    				{
+								"userName": "hari",
+								"password":"pass" 
+							}
+   
+          add user  (POST)   :  localhost:8081   /admin/userAdd
+          
+          search user (GET)  :  localhost:8081   /admin/userSearch/1
+          
+          update user (POST) :  localhost:8081   /admin/userUpdate/11
+          
+          delete user (GET)  :  localhost:8081   /admin/userDelete/11
+          
+         --------------------------------------------
+         
+     case 3 : As an admin I should be able to see all the bills getting generated today
+    
+         (GET)   -->   localhost:8081  /admin/generatingTodaysAllBillByAdmin
+            
+            -------------------------------------------------------------
+            
+     case 4 :  As an admin I should be able to see the total sale from this month.
+     
+         (GET)   -->   localhost:8081  /admin/totalSaleByAdmin 
+     
+       ---------------------------------------------------------------
+       
+     case 5 : As an admin I should be able to see all the orders done by a specific user.
+     
+        (GET)   -->    localhost:8081  /admin/orderDoneBySpecificUser/hari@gmail.com
+             
+         --------------------------------------------------------------
+         
+     case 6 : As an admin I should be able to perform CRUD on menu and menu items.
+         
+         Example :-  by selecting chinese(or many) menu then do a crud operation
+                                         
+                         {
+                       			"itemName":"Chilli_Panner",
+                       			 "price": 180
+                 	     }
+                 	     
+            (POST)       ->   localhost:8081     /admin/Chinese/itemAdd  
+                   
+            (POST)       ->   localhost:8081     /admin/Chinese/itemUpdate/Chilli_Panner
+                   
+             (GET)       ->   localhost:8081     /admin/Chinese/itemSearch/Chilli_Panner
+                   
+            (GET)        ->   localhost:8081     /admin/Chinese/itemDelete/Chilli_Panner
+               
+         ------------------------------------------------------------------------------
+         
+         
+         
+         
+         
+         
+              
+     
+     
+     
+     
+     
+     
+     
+           
